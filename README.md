@@ -1,4 +1,4 @@
-##这是我学习Spring MVC过程中创建的仓库
+##Spring MVC Learning Curve
 Compilation
 -----------
 1.  Download tag zip from [SpringMVC tags][tags].
