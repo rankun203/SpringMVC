@@ -18,7 +18,7 @@ Compilation
 Execution
 ---------
 Once you have Compiled the Project, you can run it immediately within Tomcat, Jetty etc,
-then open you prefer Web Broswer and open [http://localhost:8080/][link1] or [http://localhost:8080/SpringMVC/][link2]
+then open you prefer Web Broswer and open [http://localhost:8080/][link1] or [http://localhost:8080/SpringMVC/][link2].
 ###Use Tomcat
 1.  Copy the war file to your Tomcat Webapp directory.
 2.  Start your tomcat web server.
