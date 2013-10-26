@@ -11,7 +11,7 @@ Compilation
 1.  Clone the whole project use `git clone git@github.com:rankun203/SpringMVC.git`.
 2.  Change directory to SpringMVC/.
 3.  Use `git tag` get all tags name.
-4.  Use `git checkout v1.0-HelloWorld` checkout the files of the tag v1.0-HelloWorld.
+4.  Use `git checkout v1.0-HelloWorld` checkout the files of the tag *v1.0-HelloWorld*.
 5.  Compile project use maven Command `mvn clean install`.
 6.  Change directory to ./target and you will get the war file.
 
