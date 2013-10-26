@@ -11,14 +11,14 @@ Compilation
 1.  Clone the whole project use `git clone git@github.com:rankun203/SpringMVC.git`.
 2.  Change directory to SpringMVC/.
 3.  Use `git tag` get all tags name.
-4.  Use `git checkout HelloWorld` checkout the files of the tag HelloWorld.
+4.  Use `git checkout v1.0-HelloWorld` checkout the files of the tag *v1.0-HelloWorld*.
 5.  Compile project use maven Command `mvn clean install`.
 6.  Change directory to ./target and you will get the war file.
 
 Execution
 ---------
 Once you have Compiled the Project, you can run it immediately within Tomcat, Jetty etc,
-then open you prefer Web Broswer and open [http://localhost:8080/][link1] or [http://localhost:8080/SpringMVC/][link2]
+then open you prefer Web Broswer and open [http://localhost:8080/][link1] or [http://localhost:8080/SpringMVC/][link2].
 ###Use Tomcat
 1.  Copy the war file to your Tomcat Webapp directory.
 2.  Start your tomcat web server.
