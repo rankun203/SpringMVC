@@ -6,6 +6,7 @@ Compilation
 2.  Extract files to Home Directory.
 3.  Compile project use maven Command `mvn clean install`.
 4.  Change directory to ./target and you will get the war file.
+
 ###From git
 1.  Clone the whole project use `git clone git@github.com:rankun203/SpringMVC.git`.
 2.  Change directory to SpringMVC/.
@@ -13,6 +14,7 @@ Compilation
 4.  Use `git checkout HelloWorld` checkout the files of the tag HelloWorld.
 5.  Compile project use maven Command `mvn clean install`.
 6.  Change directory to ./target and you will get the war file.
+
 Execution
 ---------
 Once you have Compiled the Project, you can run it immediately within Tomcat, Jetty etc,
