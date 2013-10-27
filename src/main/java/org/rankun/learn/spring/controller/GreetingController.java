@@ -2,6 +2,7 @@ package org.rankun.learn.spring.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
+import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 import org.rankun.learn.spring.models.Greeting;
@@ -24,7 +25,7 @@ public class GreetingController {
 	@RequestMapping("greeting")
 	public @ResponseBody
 	Greeting greeting(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
-        Logger.getGlobal().log(Level.INFO, "greeting executing.");
+        Logger.getLogger("INFO_LOG").log(Level.INFO, "greeting executing.");
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 }
