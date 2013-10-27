@@ -22,6 +22,20 @@
     </filter-mapping>
 
     <!--Servlet-->
+    <!--static resources-->
+    <!--higher priority than spring mvc resources mapping-->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
     <!--Spring Servlet Dispatcher-->
     <servlet>
         <servlet-name>dispatcher</servlet-name>

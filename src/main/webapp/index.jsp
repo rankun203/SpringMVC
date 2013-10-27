@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>Welcome, Please accepts my <a href="greeting">greeting</a></h1>
+<h1 id="welcome"></h1>
 </body>
+<script type="text/javascript" src="scripts/init.js"></script>
 </html>
