@@ -45,25 +45,19 @@
 <script src="js/jquery.autocomplete.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-
         $('#inputField1').autocomplete({
             serviceUrl: '${pageContext.request.contextPath}/autoComplete/getTags',
             paramName: "tagName",
             delimiter: ",",
             transformResult: function (response) {
-
                 return {
                     //must convert json to javascript object before process
                     suggestions: $.map($.parseJSON(response), function (item) {
-
                         return { value: item.tagName, data: item.id };
                     })
-
                 };
             }
-
         });
-
     });
 </script>
 </body>
