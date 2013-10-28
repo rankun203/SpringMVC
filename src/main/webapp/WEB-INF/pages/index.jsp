@@ -8,5 +8,5 @@
 <body>
 <h1 id="welcome"></h1>
 </body>
-<script type="text/javascript" src="scripts/init.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
 </html>

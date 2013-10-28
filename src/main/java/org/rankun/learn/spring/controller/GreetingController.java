@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,7 +23,13 @@ public class GreetingController {
     private final String template = "Hello, %s";
     private final AtomicLong counter = new AtomicLong();
 
-	@RequestMapping("greeting")
+    @RequestMapping("/")
+    public ModelAndView welcome () {
+        ModelAndView view = new ModelAndView("index");
+        return view;
+    }
+
+    @RequestMapping("greeting")
 	public @ResponseBody
 	Greeting greeting(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
         Logger.getLogger("INFO_LOG").log(Level.INFO, "greeting executing.");
