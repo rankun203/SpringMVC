@@ -14,6 +14,7 @@
         <slf4j-version>1.6.1</slf4j-version>
         <log4j-version>1.2.17</log4j-version>
         <jstl.version>1.2</jstl.version>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>

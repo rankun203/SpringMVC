@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("/autoComplete")
 public class MainController {
 
 	List<Tag> data = new ArrayList<Tag>();
@@ -29,7 +30,7 @@ public class MainController {
 
 	}
 
-	@RequestMapping(value = "/autoComplete", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getPages() {
 
 		ModelAndView model = new ModelAndView("autoComplete");
@@ -37,7 +38,13 @@ public class MainController {
 
 	}
 
-	@RequestMapping(value = "/autoComplete/getTags", method = RequestMethod.GET)
+    @RequestMapping(value = "/submit", method = RequestMethod.POST)
+    @ResponseBody
+    public String submit (@RequestParam(value = "inputField1", required = true, defaultValue = "java") String inputField1) {
+        return inputField1 + " through server.";
+    }
+
+	@RequestMapping(value = "/getTags", method = RequestMethod.GET)
 	public @ResponseBody
 	List<Tag> getTags(@RequestParam String tagName) {
 

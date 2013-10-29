@@ -20,6 +20,7 @@
     <![endif]-->
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <div class="container">
     <div class="panel panel-success">
         <div class="col-xs-12 col-md-12 panel-heading">
@@ -29,7 +30,7 @@
             <form class="form-inline" action="#" role="form">
                 <div class="form-group col-md-8 col-xs-12">
                     <label class="sr-only" for="inputField1">请输入一种语言</label>
-                    <input class="form-control" id="inputField1" type="text" placeholder="请输入一门语言"/>
+                    <input class="form-control" id="inputField1" type="text" name="inputField1" placeholder="请输入一门语言"/>
                 </div>
                 <button class="btn btn-default col-md-4 col-xs-12" type="submit">Ok</button>
             </form>
@@ -37,11 +38,7 @@
     </div>
 </div>
 
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-2.0.3.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="js/jquery.autocomplete.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
