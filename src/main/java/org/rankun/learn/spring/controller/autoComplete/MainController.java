@@ -38,7 +38,7 @@ public class MainController {
 
 	}
 
-    @RequestMapping(value = "/submit", method = RequestMethod.POST)
+    @RequestMapping(value = "/submit", method = RequestMethod.GET)
     @ResponseBody
     public String submit (@RequestParam(value = "inputField1", required = true, defaultValue = "java") String inputField1) {
         return inputField1 + " through server.";

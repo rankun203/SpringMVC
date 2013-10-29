@@ -27,13 +27,23 @@
             <h2>欢迎测试ajax自动完成页面</h2>
         </div>
         <div class="panel-body">
-            <form class="form-inline" action="#" role="form">
-                <div class="form-group col-md-8 col-xs-12">
-                    <label class="sr-only" for="inputField1">请输入一种语言</label>
-                    <input class="form-control" id="inputField1" type="text" name="inputField1" placeholder="请输入一门语言"/>
+            <div class="row">
+                <form class="form-inline" action="javascript:void(0);" role="form" id="form1-submit">
+                    <div class="form-group col-md-8 col-xs-12">
+                        <label class="sr-only" for="inputField1">请输入一种语言</label>
+                        <input class="form-control" id="inputField1" type="text" name="inputField1" placeholder="请输入一门语言"/>
+                    </div>
+                    <button class="btn btn-default col-md-4 col-xs-12" type="submit">Ok</button>
+                </form>
+            </div>
+            <div class="row marginTopDown10">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 col-xs-12 alert alert-info" id="msg-box1">
+                    <b>server says:</b>
+                    <span id="msg"></span>
                 </div>
-                <button class="btn btn-default col-md-4 col-xs-12" type="submit">Ok</button>
-            </form>
+                <div class="col-md-3"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -41,20 +51,28 @@
 <jsp:include page="footer.jsp"></jsp:include>
 <script src="js/jquery.autocomplete.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('#inputField1').autocomplete({
-            serviceUrl: '${pageContext.request.contextPath}/autoComplete/getTags',
-            paramName: "tagName",
-            delimiter: ",",
-            transformResult: function (response) {
-                return {
-                    //must convert json to javascript object before process
-                    suggestions: $.map($.parseJSON(response), function (item) {
-                        return { value: item.tagName, data: item.id };
-                    })
-                };
-            }
-        });
+    $('#inputField1').autocomplete({
+        serviceUrl: '${pageContext.request.contextPath}/autoComplete/getTags',
+        paramName: "tagName",
+        delimiter: ",",
+        transformResult: function (response) {
+            return {
+                //must convert json to javascript object before process
+                suggestions: $.map($.parseJSON(response), function (item) {
+                    return { value: item.tagName, data: item.id };
+                })
+            };
+        }
+    });
+    $("#form1-submit").submit(function () {
+        $.get("autoComplete/submit",
+            {
+                inputField1: $("input#inputField1").val()
+            },
+            function (data) {
+                $("#msg").text(data);
+                $("#msg-box1").show();
+            });
     });
 </script>
 </body>
