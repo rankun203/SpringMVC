@@ -33,7 +33,7 @@ that is on your filesystem into a tomcat container with a simple java -jar comma
 You can get the Tomcat Server runs through the serial steps:
 
 1.  Compile a runnable jar server file through the course from [jsimone/webapp-runner/README.md][webapp-readme]
-2.  use `webapp-runner.jar -jar SpringMVC.war` to launch server.
+2.  use `java -jar webapp-runner.jar SpringMVC.war` to launch server.
 
 [tags]:https://github.com/rankun203/SpringMVC/releases
 [webapp-runner]:https://github.com/jsimone/webapp-runner
