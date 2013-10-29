@@ -1,5 +1,5 @@
 #Spring MVC Learning Curve [![Build Status](https://drone.io/github.com/rankun203/SpringMVC/status.png)](https://drone.io/github.com/rankun203/SpringMVC/latest)
-##Download Latest War File
+##Download Latest Distribution
 ------------------------
 Drone.io.rankun203 [`SpringMVC.war`][droneio.war]
 ##Compilation
